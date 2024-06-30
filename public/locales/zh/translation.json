@@ -1,0 +1,36 @@
+{
+  "site": {
+    "title": "Caij",
+    "description": "好用的App开发者"
+  },
+  "main": {
+    "header": {
+      "puremusic": "棉花音乐",
+      "flyy": "Flyy(Twitter App)",
+      "mediadownload": "视频下载器",
+      "see": "See微博",
+      "about": "关于"
+    },
+    "apps": {
+      "title": "开发者的更多App",
+      "item1": {
+        "title": "棉花音乐",
+        "description": "一个简洁的音乐播放器，支持本地文件、挂载云盘音乐、Emby Jelly Subsonic等媒体服务"
+      },
+      "item2": {
+        "title": "视频下载器",
+        "description": "支持youtube、instargram、Twitter、facebook、spotify、tt 媒体文件下载"
+      },
+      "item3": {
+        "title": "See",
+        "description": "一个简洁无广告的微博App"
+      },
+      "item4": {
+        "title": "Flyy Twitter&X App",
+        "description": "简洁无广告的Twitter&X App"
+      }
+    },
+    "privacy": "隐私协议",
+    "support": "支持"
+  }
+}

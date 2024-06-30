@@ -1,0 +1,36 @@
+{
+  "site": {
+    "title": "Caij",
+    "description": "Developer of useful apps"
+  },
+  "main": {
+    "header": {
+      "puremusic": "PureMusic",
+      "flyy": "Flyy(Twitter App)",
+      "mediadownload": "Media Download Kit",
+      "see": "See Weibo",
+      "about": "About"
+    },
+    "apps": {
+      "title": "More Apps by Developer",
+      "item1": {
+        "title": "PureMusic",
+        "description": "A music player that supports cloud drive audio and Emby Jelly Subsonic media services"
+      },
+      "item2": {
+        "title": "VideoDownload",
+        "description": "youtube、instargram、Twitter、facebook、spotify、tt media download"
+      },
+      "item3": {
+        "title": "See",
+        "description": "A clean app for Weibo"
+      },
+      "item4": {
+        "title": "Flyy Twitter&X App",
+        "description": "Clean、Beautiful、NO ADs Twitter&X App"
+      }
+    },
+    "privacy": "Privacy Policy",
+    "support": "Support"
+  }
+}

@@ -1,0 +1,56 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/widgets/Header.astro';
+import Footer from '~/components/widgets/Footer.astro';
+
+
+import type { MetaData } from '~/types';
+import {getHomePermalink, getPermalink} from "../utils/permalinks";
+import { t } from "i18next";
+
+export interface Props {
+  metadata?: MetaData;
+  isCheckDown
+}
+
+const { metadata } = Astro.props;
+
+const headerData = {
+  links: [
+    // { text: t("main.header.home"), href: getHomePermalink() },
+    { text: t("main.header.puremusic"), href: `https://music.caij.xyz`, target: "_blank" },
+    { text: t("main.header.flyy"), href: `https://flyy.caij.xyz`, target: "_blank" },
+    { text: t("main.header.mediadownload"), href: `https://dkit.caij.xyz/`, target: "_blank" },
+    { text: t("main.header.see"), href: `https://see.caij.xyz`, target: "_blank" },
+    { text: t("main.header.about"), href: ""},
+  ],
+  position: "left"
+}
+
+const footerData =  {
+  links: [
+    {
+      title: t("main.support"),
+      links: [
+        { text: 'app.service.pub@gmail.com', href: 'mailto:app.service.pub@gmail.com' },
+        { text: 'Twitter&X', href: 'https://x.com/ethandkv' },
+      ],
+    },
+  ],
+  footNote: `
+    <a class="text-blue-600 underline dark:text-muted" href="https://beian.miit.gov.cn/">粤ICP备2021141980号</a> 
+  `,
+}
+---
+
+<Layout metadata={metadata}>
+  <slot name="header">
+    <Header {...headerData} isSticky false false />
+  </slot>
+  <main>
+    <slot />
+  </main>
+  <slot name="footer">
+    <Footer {... footerData} />
+  </slot>
+</Layout>

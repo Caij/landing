@@ -1,0 +1,66 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import Header from "~/components/widgets/Header.astro";
+import Prices from "../components/widgets/Pricing.astro";
+import Features from "../components/widgets/Features.astro";
+import { SITE } from "astrowind:config";
+import Button from "../components/ui/Button.astro";
+import Image from "../components/common/Image.astro";
+import Features2 from "../components/widgets/Features2.astro";
+import { t, changeLanguage } from "i18next";
+import IconTextButton from "../components/ui/IconTextButton.astro";
+
+changeLanguage("en");
+
+const appStoreImg = "~/assets/images/app-store.png";
+const appStoreDownloadLink = "https://play.google.com/store/apps/details?id=com.caij.twiper";
+const googlePlayImg = "~/assets/images/google-play.png";
+const googlePlayDownloadLink = "https://play.google.com/store/apps/details?id=com.caij.twiper";
+const imgHomeScreen = "~/assets/images/app-home-screen.png";
+const metadata = {
+    title: t("site.title"),
+    description: t("site.description"),
+    ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Features2
+    id="apps"
+    title= ''
+    columns={2}
+    items={[
+      {
+        icon: '~/assets/images/puremusic-app-icon.png',
+        title: t("main.apps.item1.title"),
+        description: t("main.apps.item1.description"),
+        href: "https://music.caij.xyz/",
+        alt: t("main.apps.item1.title")
+      },
+      {
+        icon: '~/assets/images/download-app-icon.png',
+        title: t("main.apps.item4.title"),
+        description: t("main.apps.item4.description"),
+        href: "https://flyy.caij.xyz/",
+        alt: t("main.apps.item4.title")
+      },
+      {
+        icon: '~/assets/images/download-app-icon.png',
+        title: t("main.apps.item2.title"),
+        description: t("main.apps.item2.description"),
+        href: "https://dkit.caij.xyz/",
+        alt: t("main.apps.item2.title")
+      },
+      {
+        icon: '~/assets/images/see-app-icon.png',
+        title: t("main.apps.item3.title"),
+        description: t("main.apps.item3.description"),
+        href: "https://see.caij.xyz/",
+        alt: t("main.apps.item3.title")
+      },
+      
+    ]}
+  />
+
+</Layout>
